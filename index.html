@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR management dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <img src="images/image.svg" aria-hidden="true">
+            <h2>TalentCore</h2>
+        </div>
+        <div class="bar">
+            <div class="search-box">
+                <i class="bi bi-search"></i>
+                <input type="text" name="search-box" placeholder="Search for jobs, candidates and more...">
+            </div>
+            <div class="settings">
+                <i class="bi bi-gear"></i>
+                <i class="bi bi-bell"></i>
+                <i class="bi bi-person-circle"></i>
+            </div>
+        </div>
+    </header>
+    <aside>
+        <nav>
+            <div class="nav-group">
+                <a class="nav-btn">
+                    <i class="bi bi-grid-fill"></i>
+                    <span>dashboard</span>
+                </a>
+                <a class="nav-btn count">
+                    <i class="bi bi-chat-square-text-fill"></i>
+                    <span>messages</span>
+                    <div id="messages-count">10</div>
+                </a>
+                <a class="nav-btn">
+                    <i class="bi bi-calendar-week-fill"></i>
+                    <span>calendar</span>
+                </a>
+            </div>
+            <div class="nav-group">
+                <div class="group-header">recruitment</div>
+                <a class="nav-btn">
+                    <i class="bi bi-briefcase-fill"></i>
+                    <span>jobs</span>
+                </a>
+                <a class="nav-btn">
+                    <i class="bi bi-people-fill"></i>
+                    <span>candidates</span>
+                    <i href="#" class="link active"></i>
+                </a>
+            
+
+                <a class="nav-btn">
+                    <i class="bi bi-diagram-3-fill"></i>
+                    <span>referrals</span>
+                </a>
+                <a class="nav-btn">
+                    <i class="bi bi-display-fill"></i>
+                    <span>career Site</span>
+                </a>
+            </div>
+            <div class="nav-group">
+                <div class="group-header">organization</div>
+                <a class="nav-btn">
+                    <i class="bi bi-person-fill"></i>
+                    <span>employees</span>
+                </a>
+                <a class="nav-btn">
+                    <i class="bi bi-file-earmark-text-fill"></i>
+                    <span>documents</span>
+                </a>
+                <a class="nav-btn">
+                    <i class="bi bi-file-bar-graph-fill"></i>
+                    <span>reports</span>
+                </a>
+            </div>
+            <nav class="sidebar">
+                <a href="#" class="menu-item" onclick="activateMenuItem(this)">Dashboard</a>
+                <a href="#" class="menu-item" onclick="activateMenuItem(this)">Messages</a>
+                <a href="#" class="menu-item" onclick="activateMenuItem(this)">Calendar</a>
+                <a href="#" class="menu-item" onclick="activateMenuItem(this)">Jobs</a>
+                <a href="#" class="menu-item" onclick="activateMenuItem(this)">Candidates</a>
+            </nav>
+            
+        </nav>
+    </aside>
+    <main>
+        <section>
+            <div id="job-openings">
+                <div>current openings</div>
+                <div class="sort-options">
+                    <span class="sort-label">sort by: latest</span>
+                    <span class="sort-icon">
+                        <i class="bi bi-caret-down-fill"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="job-cards-container">
+                    <div class="job-listing-card">
+                        <div class="job-card-header">
+                            <div class="job-card-header-left">
+                                <img src="images/image1.png" alt="sr. ux designer logo">
+                                <div class="job-title">
+                                    <span>sr. ux designer</span>
+                                    <span>Posted 2 days ago</span>
+                                </div>
+                            </div>
+                            <div class="job-details-arrow">
+                                <svg  class="arrow-up-right" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color:var(--white);">
+                                    <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="job-info">
+                            <div>
+                                <span class="material-symbols-outlined">location_on</span>
+                                <span>bengaluru</span>
+                            </div>
+                            <div>
+                                <span class="material-symbols-outlined">school</span>
+                                <span>3 years exp.</span>
+                            </div>
+                        </div>
+                        <div class="application-stats">
+                            <div>
+                                <span>45</span>
+                                <span>applications</span>
+                            </div>
+                            <div>25 in last week</div>
+                        </div>
+                    </div>
+                    <div class="job-listing-card">
+                        <div class="job-card-header">
+                            <div class="job-card-header-left">
+                                <img src="images/image2.png" alt="growth manager logo">
+                                <div class="job-title">
+                                    <span>growth manager</span>
+                                    <span>Posted 5 days ago</span>
+                                </div>
+                            </div>
+                            <div class="job-details-arrow">
+                                <svg  class="arrow-up-right" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color:var(--white);">
+                                    <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="job-info">
+                            <div>
+                                <span class="material-symbols-outlined">location_on</span>
+                                <span>remote</span>
+                            </div>
+                            <div>
+                                <span class="material-symbols-outlined">school</span>
+                                <span>2+ years exp.</span>
+                            </div>
+                        </div>
+                        <div class="application-stats">
+                            <div>
+                                <span>38</span>
+                                <span>applications</span>
+                            </div>
+                            <div>10 in last week</div>
+                        </div>
+                    </div>
+                    <div class="job-listing-card">
+                        <div class="job-card-header">
+                            <div class="job-card-header-left">
+                                <img src="images/image3.png" alt="financial analyst logo">
+                                <div class="job-title">
+                                    <span>financial analyst</span>
+                                    <span>Posted 10 days ago</span>
+                                </div>
+                            </div>
+                            <div class="job-details-arrow">
+                                <svg  class="arrow-up-right" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color:var(--white);">
+                                    <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="job-info">
+                            <div>
+                                <span class="material-symbols-outlined">location_on</span>
+                                <span>mumbai</span>
+                            </div>
+                            <div>
+                                <span class="material-symbols-outlined">school</span>
+                                <span>5+ years exp.</span>
+                            </div>
+                        </div>
+                        <div class="application-stats">
+                            <div>
+                                <span>25</span>
+                                <span>applications</span>
+                            </div>
+                            <div>25 in last week</div>
+                        </div>
+                    </div>
+                    <div class="job-listing-card">
+                        <div class="job-card-header">
+                            <div class="job-card-header-left">
+                                <img src="images/image4.png" alt="security analyst logo">
+                                <div class="job-title">
+                                    <span>security analyst</span>
+                                    <span>Posted 15 days ago</span>
+                                </div>
+                            </div>
+                            <div class="job-details-arrow">
+                                <svg  class="arrow-up-right" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color:var(--white);">
+                                    <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="job-info">
+                            <div>
+                                <span class="material-symbols-outlined">location_on</span>
+                                <span>new delhi</span>
+                            </div>
+                            <div>
+                                <span class="material-symbols-outlined">school</span>
+                                <span>7 years exp.</span>
+                            </div>
+                        </div>
+                        <div class="application-stats">
+                            <div>
+                                <span>105</span>
+                                <span>applications</span>
+                            </div>
+                            <div>73 in last week</div>
+                        </div>
+                    </div>
+                    <div class="job-listing-card g">
+                        <div class="job-card-header">
+                            <div class="job-card-header-left">
+                                <img src="images/image4.png" alt="security analyst logo">
+                                <div class="job-title">
+                                    <span>security analyst</span>
+                                    <span>Posted 15 days ago</span>
+                                </div>
+                            </div>
+                            <div class="job-details-arrow">
+                                <svg  class="arrow-up-right" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color:var(--white);">
+                                    <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="job-info">
+                            <div>
+                                <span class="material-symbols-outlined">location_on</span>
+                                <span>new delhi</span>
+                            </div>
+                            <div>
+                                <span class="material-symbols-outlined">school</span>
+                                <span>7 years exp.</span>
+                            </div>
+                        </div>
+                        <div class="application-stats">
+                            <div>
+                                <span>105</span>
+                                <span>applications</span>
+                            </div>
+                            <div>73 in last week</div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <section>
+            <div id="candidates-table-title">
+                <div>candidates</div>
+                <div class="sort-options">
+                    <span class="selected-month-year">march 2023</span>
+                    <span>
+                        <i class="bi bi-caret-down-fill"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="candidates-table">
+                <div id="table-header">
+                    <div class="header-item">all</div>
+                    <div class="header-item">accepted</div>
+                    <div class="header-item">rejected</div>
+                </div>
+                <div id="table-body">
+                    <table>
+                        <tr>
+                            <th>candidate name</th>
+                            <th>
+                                <div class="sortable-header">
+                                    rating 
+                                <span class="sorting-icons">
+                                    <i class="bi bi-caret-up-fill"></i>
+                                    <i class="bi bi-caret-down-fill"></i>
+                                </span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="sortable-header">
+                                    stages
+                                <span class="sorting-icons">
+                                    <i class="bi bi-caret-up-fill"></i>
+                                    <i class="bi bi-caret-down-fill"></i>
+                                </span>
+                                </div>
+                            </th>
+                            <th>applied role</th>
+                            <th>
+                                <div class="sortable-header">
+                                    application date
+                                <span class="sorting-icons">
+                                    <i class="bi bi-caret-up-fill"></i>
+                                    <i class="bi bi-caret-down-fill"></i>
+                                </span>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+                <div id="pagination-controls" class="hidden">
+                    <!-- <button class="arrow"><i class="bi bi-caret-left-fill"></i></button> -->
+                    <span id="pagination-numbers" >
+                    </span>
+                    <!-- <button class="arrow"><i class="bi bi-caret-right-fill"></i></i></button> -->
+                </div>
+            </div>
+        </section>
+        <!--<div class="candidate-profile">
+            <div class="candidate-header">
+                <h2>candidate details</h2>
+                <div><i class="bi bi-x"></i></div>
+            </div>
+            <div class="candidate-info">
+                <div class="profile-picture">
+                    <div class="img-container"><img src="images/img2.jpeg" alt="Candidate Image"></div>
+                    <div class="candidate-name">malaika brown</div>
+                    <span class="candidate-role">sr. UX designer</span>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="bi bi-envelope-fill"></i></div>
+                        <div class="contact-details">
+                            <span class="contact-label">email</span>
+                            <div class="contact-value">malaika.br@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="bi bi-telephone-fill"></i></div>
+                        <div class="contact-details">
+                            <span class="contact-label">phone number</span>
+                            <div class="contact-value">+11 5423-6548</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="application-details">
+                <div class="application-title">application details</div>
+                <div class="application-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-item-icon green"><i class="bi bi-check2"></i></div>
+                        <div class="timeline-info">
+                            <span class="timeline-label">screening</span>
+                            <span class="timeline-date">march 20, 2023</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="timeline-item">
+                            <div class="timeline-item-icon yellow"><i class="bi bi-hourglass"></i></div>
+                            <div class="timeline-info">
+                               <span class="timeline-label">design challenge</span>
+                               <span class="timeline-date">march 22, 2023</span>
+                            </div>
+                        </div>
+                        <div class="timeline-status">under review</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="num"><span>3</span></div>
+                        <span>interview</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="num"><span>4</span></div>
+                        <span>HR round</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="num"><span>5</span></div>
+                        <span>hired</span>
+                    </div>
+                </div>
+            </div>
+            <div class="experience-section">
+                <div class="experience-title">experience</div>
+                <div class="experience-item">
+                    <div class="company-info">
+                        <img src="images/image2.svg" alt="Company Logo">
+                        <span class="company-name">airBnb</span>
+                    </div>
+                    <span class="experience-duration">Oct ‘20 - Present</span>
+                </div>
+                <ul class="experience-description">
+                    <li>Led the redesign of the booking process for Airbnb's mobile app, resulting in a 30% increase in conversion rates and improved user satisfaction.</li>
+                </ul>
+            </div>
+            <div class="next-step">
+                <span class="next-step-text">Move to Next Step</span>
+                <span class="next-step-icon"><i class="bi bi-arrow-right"></i></span>
+            </div>
+        </div>-->
+    </main>
+    <script src="data.js"></script>
+</body>
+</html>
+
+<!--  </tr>
+                        <tr>
+                            <td class="candidate-info"><img src="images/img1.jpeg" alt="Image of charlie kristen">charlie kristen</td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                                  <span class="rating-value">4.0</span>
+                            </td>
+                            <td>design challenge</td>
+                            <td>sr. ux designer</td>
+                            <td>12/02/23</td>
+                            <td class="attachments-info">
+                                <i class="bi bi-paperclip"></i>
+                                3 files
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="candidate-info"><img src="images/img2.jpeg" alt="Image of malaika brown">malaika brown</td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                                  <span class="rating-value">3.5</span>
+                            </td>
+                            <td>screening</td>
+                            <td>growth manager</td>
+                            <td>18/02/23</td>
+                            <td class="attachments-info">
+                                <i class="bi bi-paperclip"></i>
+                                1 file
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="candidate-info"><img src="images/img3.jpeg" alt="Image of simon minter">simon minter</td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                                  <span class="rating-value">2.8</span>
+                            </td>
+                            <td>design challenge</td>
+                            <td>financial analyst</td>
+                            <td>04/01/23</td>
+                            <td class="attachments-info">
+                                <i class="bi bi-paperclip"></i>
+                                2 files
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="candidate-info"><img src="images/img4.jpeg" alt="Image of ashley brooke">ashley brooke</td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                                  <span class="rating-value">4.5</span>
+                            </td>
+                            <td>HR round</td>
+                            <td>financial analyst</td>
+                            <td>05/03/23</td>
+                            <td class="attachments-info">
+                                <i class="bi bi-paperclip"></i>
+                                3 files
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="candidate-info"><img src="images/img5.jpeg" alt="Image of nishant talwar">nishant talwar</td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                                  <span class="rating-value">5.0</span>
+                            </td>
+                            <td>round 2 interview</td>
+                            <td>sr. ux designer</td>
+                            <td>24/12/22</td>
+                            <td class="attachments-info">
+                                <i class="bi bi-paperclip"></i>
+                                2 files
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="candidate-info"><img src="images/img6.jpeg" alt="Image of mark jacobs">mark jacobs</td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                                <span class="rating-value">2.0</span>
+                            </td>
+                            <td>rejected</td>
+                            <td>growth manager</td>
+                            <td>13/02/23</td>
+                            <td class="attachments-info">
+                                <i class="bi bi-paperclip"></i>
+                                1 files
+                            </td>
+                        </tr>-->
